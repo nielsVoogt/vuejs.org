@@ -29,9 +29,11 @@ Watchers allow us to animate changes of any numerical property into another prop
 ``` js
 new Vue({
   el: '#animated-number-demo',
-  data: {
-    number: 0,
-    tweenedNumber: 0
+  data: function () {
+    return {
+      number: 0,
+      tweenedNumber: 0
+    }
   },
   computed: {
     animatedNumber: function() {
@@ -55,9 +57,11 @@ new Vue({
 <script>
 new Vue({
   el: '#animated-number-demo',
-  data: {
-    number: 0,
-    tweenedNumber: 0
+  data: function () {
+    return {
+      number: 0,
+      tweenedNumber: 0
+    }
   },
   computed: {
     animatedNumber: function() {
@@ -100,15 +104,17 @@ var Color = net.brehaut.Color
 
 new Vue({
   el: '#example-7',
-  data: {
-    colorQuery: '',
-    color: {
-      red: 0,
-      green: 0,
-      blue: 0,
-      alpha: 1
-    },
-    tweenedColor: {}
+  data: function () {
+    return {
+      colorQuery: '',
+      color: {
+        red: 0,
+        green: 0,
+        blue: 0,
+        alpha: 1
+      },
+      tweenedColor: {}
+    }
   },
   created: function () {
     this.tweenedColor = Object.assign({}, this.color)
@@ -176,15 +182,17 @@ new Vue({
 var Color = net.brehaut.Color
 new Vue({
   el: '#example-7',
-  data: {
-    colorQuery: '',
-    color: {
-      red: 0,
-      green: 0,
-      blue: 0,
-      alpha: 1
-    },
-    tweenedColor: {}
+  data: function () {
+    return {
+      colorQuery: '',
+      color: {
+        red: 0,
+        green: 0,
+        blue: 0,
+        alpha: 1
+      },
+      tweenedColor: {}
+    }
   },
   created: function () {
     this.tweenedColor = Object.assign({}, this.color)
@@ -438,9 +446,11 @@ Vue.component('animated-integer', {
 // All complexity has now been removed from the main Vue instance!
 new Vue({
   el: '#example-8',
-  data: {
-    firstNumber: 20,
-    secondNumber: 40
+  data: function () {
+    return {
+      firstNumber: 20,
+      secondNumber: 40
+    }
   },
   computed: {
     result: function () {
@@ -506,9 +516,11 @@ Vue.component('animated-integer', {
 })
 new Vue({
   el: '#example-8',
-  data: {
-    firstNumber: 20,
-    secondNumber: 40
+  data: function () {
+    return {
+      firstNumber: 20,
+      secondNumber: 40
+    }
   },
   computed: {
     result: function () {
